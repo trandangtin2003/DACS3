@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "50710005257",
+    "project_id": "dacs3-d135f",
+    "storage_bucket": "dacs3-d135f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50710005257:android:15f53ad342055e4ef59ad8",
+        "android_client_info": {
+          "package_name": "com.example.dacs3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50710005257-frvqt4lceucqk00f0sgkt1p1hqi4gfqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_zWRJG5Knf6jQIMVCWYlkC5Qf_GftYRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50710005257-frvqt4lceucqk00f0sgkt1p1hqi4gfqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

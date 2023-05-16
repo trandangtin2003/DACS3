@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kích thước cho optionBtn khi bình thường -->
+    <dimen name="option_btn_normal_width">40dp</dimen>
+    <dimen name="option_btn_normal_height">40dp</dimen>
+
+    <!-- Kích thước cho optionBtn khi lớn hơn -->
+    <dimen name="option_btn_large_width">43dp</dimen>
+    <dimen name="option_btn_large_height">43dp</dimen>
+</resources>

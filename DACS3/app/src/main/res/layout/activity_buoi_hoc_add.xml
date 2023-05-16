@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back01"
+    tools:context=".add_buoiHoc.buoiHocAddActivity">
+
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_toolbar01">
+
+        <!--Back button-->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_white"/>
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/backBtn"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Cung cấp thời gian diễn ra buổi học"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+
+    </RelativeLayout>
+
+
+    <!--Input giờ-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/timeHocTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="230dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/timeHocEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_time_gray"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="chọn Giờ"
+            android:inputType="time"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray01"
+            android:focusable="false"
+            android:onClick="showTimePickerDialog"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Chọn thứ trong tuần-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/thuHocTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/timeHocTil"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/thuHocEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_week_gray"
+            android:drawablePadding="10dp"
+            android:hint="thứ trong tuần sẽ diễn ra buổi học"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray01"
+            android:focusable="false"
+            android:onClick="showDayOfWeekPickerDialog"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--Chọn ngày bắt đầu-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/start_timeTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/thuHocTil"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/start_timeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_calendar_today_gray"
+            android:drawablePadding="10dp"
+            android:hint="ngày bắt đầu"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray01"
+            android:focusable="false"
+            android:onClick="showDatePickerDialog"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Chọn ngày kết thúc-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/end_timeTil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/start_timeTil"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/end_timeEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_today_gray"
+            android:drawablePadding="10dp"
+            android:hint="ngày kết thúc"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray01"
+            android:focusable="false"
+            android:onClick="showDatePickerDialog"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Add button-->
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end_timeTil"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_button01"
+        android:text="Submit"
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>
